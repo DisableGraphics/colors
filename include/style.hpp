@@ -7,7 +7,7 @@ class Style
 {
     public:
         /**
-        *   \brief Enum that contains the style
+        *   \brief Enum that contains the style.
         */
         enum Style_type
         {
@@ -19,25 +19,25 @@ class Style
             CONCEALED = 32
         };
         /**
-        *   \brief Default Style constructor
+        *   \brief Default Style constructor.
         */
         Style();
         /**
-        *   \brief Style constructor
-        *   \param style Initial value
+        *   \brief Style constructor.
+        *   \param style Initial value.
         */
         Style(Style_type style);
         /**
-        *   \brief Operator overload for int
-        *   This returns the sum of all the styles in the Style object.
+        *   \brief Operator overload for int.
+        * This returns the sum of all the styles in the Style object.
         */
         operator int() const;
         /**
-        *   \brief Get all the styles contained in the Style object
+        *   \brief Get all the styles contained in the Style object.
         */
         std::vector<Style_type> get_styles() const;
         /**
-        *   \brief Add another style to the Style object
+        *   \brief Add another style to the Style object.
         */
         void add_style(Style_type style);
         

@@ -20,21 +20,21 @@ class Colors
             DEFAULT = 9
         };
         /**
-        * \brief Returns the ANSI escape code for the given color and style
-        * \param fgcolor The foreground color
-        * \param style The style
-        * \return The ANSI escape code as std::string
+        * \brief Returns the ANSI escape code for the given color and style.
+        * \param fgcolor The foreground color.
+        * \param style The style.
+        * \return The ANSI escape code as std::string.
         */
         static std::string compose(const Color &fgcolor, const Style &style);
         /**
-        * \brief Returns the ANSI escape code as a readable string
-        * \param fgcolor The foreground color
-        * \param style The style
-        * \return The ANSI escape code as std::string
+        * \brief Returns the ANSI escape code as a readable string.
+        * \param fgcolor The foreground color.
+        * \param style The style.
+        * \return The ANSI escape code as std::string.
         */
         static std::string get_compose_string(const Color &fgcolor, const Style &style);
         /**
-        * \brief Resets the command line to the default style and color
+        * \brief Resets the command line to the default style and color.
         */
         static std::string reset();
     private:
