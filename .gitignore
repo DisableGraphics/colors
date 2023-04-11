@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# Useless directories and files
+/doc
+/compile_commands.json
