@@ -1,0 +1,47 @@
+/*! \mainpage Colors
+ *
+ * \section intro_sec Introduction
+ *
+ * Welcome to the Colors documentation. This documentation will (hopefully)
+ * help you use the Colors library.
+ *
+ * \section install_sec Installation
+ *
+ * Colors uses <a href="https://mesonbuild.com/">Meson</a> as its build system internally.
+ * It is recommended to have a bit of knowledge about Meson beforehand.
+ * However, the Meson team provides newbies with <a href="https://mesonbuild.com/Tutorial.html"> an excellent tutorial </a>
+ *
+ * \section tut_sec Tutorial
+ * First, create a directory to house the tutorial files. The directory can be named whatever comes to mind. <br>
+ * Then, inside the directoy, create a file named <code>meson.build</code> which contains the following contents:
+ * \code{.meson}
+ * project('example', 'cpp')
+ * sources = files('main.cpp')
+ * colors_dep = dependency('colors', fallback : ['colors', 'colors_dep'])
+ * executable('example', sources, dependencies : colors_dep)
+ * \endcode
+ * Following this, create, in the same directory as the meson.build file another file named <code>main.cpp</code>
+ * with the following contents:
+ * \code{.cpp}
+ * #include <colors.hpp>
+ * #include <iostream>
+ *
+ * int main()
+ * {
+ *     std::cout << Colors::compose(Colors::RED, Style::BOLD) << "Hello World!" << Colors::reset() << std::endl;
+ *     return 0;
+ * }
+ *
+ * \endcode
+ * Then, create a subdirectory named <code>subprojects</code>. <br>
+ * Download <a href="colors.wrap" download="colors"> this file </a> and copy it into <code>subprojects</code> <br>
+ * Now, save and compile the project with the following commands:
+ * \code{.sh}
+ * meson setup builddir
+ * cd builddir
+ * meson compile
+ * ./example
+ * \endcode
+ * If everything went well, the program should have been executed correctly and in the terminal there should be
+ * a "Hello World" message in bold, red letters.
+ */
